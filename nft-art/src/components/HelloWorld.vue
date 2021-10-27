@@ -1,133 +1,72 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+<div>
+    <v-row no-gutters style="text-align: center">
+    <v-col>
+      <img class="hana-image" src="https://user-images.githubusercontent.com/36289638/139012300-d5aa3e17-587e-4bc2-925e-d5f64b667e00.png"/>
+    </v-col>
+    <v-col>
+      <img class="hana-image" src="https://user-images.githubusercontent.com/36289638/139013255-f58b0ba0-9d11-4d50-87f1-e7910559062b.png"/>
+    </v-col>
+    <v-col>
+      <img class="hana-image" src="https://user-images.githubusercontent.com/36289638/139013304-b8f1d63d-01a6-4d80-b15c-e9a5cf563c6f.png"/>
+    </v-col>
+  </v-row>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">Welcome to Vuetify</h1>
+  <div class="hana-main-gap" />
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br />please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Community</a
-          >
-        </p>
-      </v-col>
+  <v-row class="hana-main-title justify-center">
+		<span>Top collections over &nbsp;</span>
+		<span style="color: rgba(25, 139, 131, 1);">last 7 days</span>
+    <img src="https://user-images.githubusercontent.com/36289638/139015522-0a82c8b4-7026-42c4-a64f-7f5f87ffd76c.png" alt="">
+  </v-row>
 
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+  <v-row class="justify-center" style="margin-top: 30px">
+    <v-btn elevation="2" x-large class="ranking-btn">
+    Go To Rankings
+  </v-btn>
+  </v-row>
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+  <div class="hana-main-gap" />
 
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
+  <div class="container hana-main-text-center">
+    <v-row class="hana-main-title justify-center">
+      <span style="color: rgba(154, 185, 123, 1);"> / </span>
+      금주의 작가
+      <span style="color: rgba(154, 185, 123, 1);"> / </span>
     </v-row>
-  </v-container>
+    <div style="text-align: right">
+      <a href="#">금주의 작가 더보기 →</a>
+    </div>
+    <div>
+      <img style="width: 1140px;" src="https://user-images.githubusercontent.com/36289638/139017563-f594fc3b-c152-42e5-87c5-3e3ff9da328c.png"/>
+    </div>
+</div>
+
+</div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
 
-  data: () => ({
-    ecosystem: [
-      {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader",
-      },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify",
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify",
-      },
-    ],
-    importantLinks: [
-      {
-        text: "Documentation",
-        href: "https://vuetifyjs.com",
-      },
-      {
-        text: "Chat",
-        href: "https://community.vuetifyjs.com",
-      },
-      {
-        text: "Made with Vuetify",
-        href: "https://madewithvuejs.com/vuetify",
-      },
-      {
-        text: "Twitter",
-        href: "https://twitter.com/vuetifyjs",
-      },
-      {
-        text: "Articles",
-        href: "https://medium.com/vuetify",
-      },
-    ],
-    whatsNext: [
-      {
-        text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer",
-      },
-      {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/getting-started/pre-made-layouts",
-      },
-      {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
-      },
-    ],
-  }),
-};
+}
 </script>
+
+<style>
+.hana-image {
+   margin: 3%;
+    width: 250px;
+    height: 300px;
+}
+.hana-main-title {
+  font-size: large;
+  font-weight: bold;
+}
+.hana-main-gap {
+  height: 80px;
+}
+.ranking-btn {
+  background-color: rgba(25, 139, 131, 1) !important;
+  color: white !important;
+  margin: 30px 0px 30px 0px;
+}
+</style>
